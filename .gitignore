@@ -34,8 +34,13 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+
+# Things we've added ourselves
 SlickChef/secrets.py
 venv/
+SlickChef/settings.py
+#
+
 env/
 build/
 develop-eggs/
