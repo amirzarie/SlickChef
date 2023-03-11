@@ -34,7 +34,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-SlickChef/secrets.py
+SlickChef.secrets.py
 venv/
 env/
 build/
