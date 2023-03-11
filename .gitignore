@@ -87,4 +87,5 @@ __pycache__/
 local_settings.py
 
 .env
+SlickChef/.env
 db.sqlite3
