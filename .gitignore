@@ -39,6 +39,7 @@ __pycache__/
 SlickChef/secrets.py
 venv/
 SlickChef/settings.py
+main_app/key.txt
 #
 
 env/
