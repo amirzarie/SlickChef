@@ -7,3 +7,6 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f"Recipe: {self.recipe}"
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'recipe_id: self.id'})
