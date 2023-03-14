@@ -40,7 +40,7 @@ SlickChef/secrets.py
 venv/
 SlickChef/settings.py
 main_app/key.txt
-main_app/migrations
+#main_app/migrations
 #
 
 env/
