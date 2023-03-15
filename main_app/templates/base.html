@@ -27,9 +27,10 @@
             {% if user.is_authenticated %}
               <li><a href="">My Recipes</a></li> <!-- href to be added -->
               <li><a href="{% url 'recipes_create' %}">Recipize!</a></li>
+              <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
-              <li><a href="">Sign Up</a></li>
-              <li><a href="">Log In</a></li>
+              <li><a href="{% url 'signup' %}">Sign Up</a></li>
+              <li><a href="{% url 'login' %}">Log In</a></li>
             {% endif %}
           </ul>
         </div>
