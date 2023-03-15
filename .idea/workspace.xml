@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_app/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_app/templates/registration/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SlickChef/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SlickChef/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +110,7 @@
       <workItem from="1678556993383" duration="11294000" />
       <workItem from="1678575491243" duration="69000" />
       <workItem from="1678751925119" duration="3049000" />
-      <workItem from="1678920402043" duration="352000" />
+      <workItem from="1678920402043" duration="658000" />
     </task>
     <servers />
   </component>
