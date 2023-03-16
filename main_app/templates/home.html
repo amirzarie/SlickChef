@@ -1,4 +1,28 @@
-{% extends 'base.html' %} {% block content %}
+{% load static %}
 
-<h1>Home</h1>
-{% endblock %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_style.css' %}">
+    <title>SlickChef</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content__text">
+                <p class="title" id="title">
+                    Welcome to SlickChef!
+                </p>
+                <img src="{% static "images/SlickChef Logo rmb (2).png" %}" alt="SlickChef Logo" id="slickchef_logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <script src="../static/scripts/index.js"></script>
+</body>
+</html>
