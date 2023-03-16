@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form action={% url "show_recipe" %} method="post">
+        {% csrf_token %}
+        <label for="user-text">Ingredients</label>
+        <textarea name="ingredients" id="ingredients" cols="20" rows="10"></textarea>
+        <input type="submit" value="Recipize!" class="btn" />
+    </form>
+
+{% endblock %}
