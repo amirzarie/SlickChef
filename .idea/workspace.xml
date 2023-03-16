@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/recipes/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/recipes/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +115,7 @@
       <workItem from="1678556993383" duration="11294000" />
       <workItem from="1678575491243" duration="69000" />
       <workItem from="1678751925119" duration="3049000" />
-      <workItem from="1678920402043" duration="4036000" />
+      <workItem from="1678920402043" duration="4472000" />
     </task>
     <servers />
   </component>
