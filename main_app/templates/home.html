@@ -12,15 +12,34 @@
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <div class="content__text">
-                <p class="title" id="title">
-                    Welcome to SlickChef!
-                </p>
-                <img src="{% static "images/SlickChef Logo rmb (2).png" %}" alt="SlickChef Logo" id="slickchef_logo">
-            </div>
+
+        <div class="wrapper">
+        <div class="box">
+            <div id="sandwich">&#129386</div>
+            <div id="avocado">&#129361</div>
+            <div id="pot_of_food">&#127858</div>
+            <div id="steaming_bowl">&#127836</div>
+            <div id="curry_rice">&#127835</div>
+            <div id="bread">&#127838</div>
+            <div id="cheese">&#129472</div>
+            <div id="sushi">&#127843</div>
+            <div id="taco">&#127790</div>
+            <div id="croissant">&#129360</div>
         </div>
+
+            <div class="content">
+                <div class="content__text">
+                    <p class="title" id="title">
+                        Welcome to SlickChef!
+                    </p>
+                    <a href="{% url 'about' %}"><img src="{% static "images/SlickChef Logo rmb (2).png" %}" alt="SlickChef Logo" id="slickchef_logo"></a>
+                </div>
+            </div>
     </div>
+
+    </div>
+
+
 
     <div class="cursor" id="cursor"></div>
     <script src="../static/scripts/index.js"></script>

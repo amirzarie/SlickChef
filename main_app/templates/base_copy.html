@@ -14,19 +14,25 @@
   </head>
   <body>
     <header class="navbar-fixed">
-      <nav class="black">
-          <ul class="nav-area">
-              <li><a href="/" class="brand-logo">SlickChef</a></li>
-              <li><a href="{% url 'about' %}">About</a></li>
-              {% if user.is_authenticated %}
-                <li><a href="">My Recipes</a></li>
-                <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
-              {% else %}
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                <li><a href="{% url 'login' %}">Log In</a></li>
-              {% endif %}
+      <nav>
+        <div class="nav-wrapper black">
+          <ul>
+            <li>
+              <div><a href="/" class="left brand-logo">&nbsp;&nbsp;SlickChef</a></div>
+            </li>
           </ul>
+          <ul class="right">
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+              <li><a href="">My Recipes</a></li> <!-- href to be added -->
+              <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
+              <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+              <li><a href="{% url 'signup' %}">Sign Up</a></li>
+              <li><a href="{% url 'login' %}">Log In</a></li>
+            {% endif %}
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="container">

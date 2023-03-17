@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SlickChef/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SlickChef/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/home_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/home_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,8 @@
       <workItem from="1678575491243" duration="69000" />
       <workItem from="1678751925119" duration="3049000" />
       <workItem from="1678920402043" duration="11431000" />
-      <workItem from="1679000786745" duration="3621000" />
+      <workItem from="1679000786745" duration="3951000" />
+      <workItem from="1679031401668" duration="8456000" />
     </task>
     <servers />
   </component>
