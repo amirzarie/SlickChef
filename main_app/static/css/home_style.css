@@ -43,6 +43,9 @@ body {
   border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
   position: absolute;
   z-index: -1;
+  text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 #slickchef_logo {

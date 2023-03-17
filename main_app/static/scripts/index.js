@@ -2,8 +2,8 @@ const cursor = document.querySelector('#cursor')
 const devs = document.querySelector('#title')
 
 function addEffect(e) {
-    cursor.style.left = (e.x - 250) + 'px';
-    cursor.style.top = (e.y - 250) + 'px';
+    cursor.style.left = (e.x - 275) + 'px';
+    cursor.style.top = (e.y - 275) + 'px';
 }
 
 function removeEffect() {
