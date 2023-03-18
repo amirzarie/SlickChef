@@ -49,7 +49,29 @@ def get_ingredients(request):
 
 def show_recipe(request):
     user_prompt = request.POST
-    prompt = f"Give me a recipe using the following ingredients: {user_prompt}. Also, give your answer in a nicely formatted html (just everything that goes inside a div tag). But, just give me the html and nothing else and no other descriptions."
+    prompt = f'''Give me a recipe with the following ingredients: {user_prompt}. But, give the recipe by filling out the following html form as template:" \
+    <div>
+        <h2 id="recipe_name"></h2>
+        <p id="recipe_description"></p>
+        <h2 id="ingredients"></h2>
+        <ul id="ingredient_list">
+            <li id="ingredient_1"></li>
+            <li id="ingredient_2"></li>
+        </ul>
+        <h2 id="instructions"></h2>
+        <ol id="instruction_list">
+            <li id="step_1"></li>
+            <li id="step_2"></li>
+        </ol>
+        <p id="prep_time"></p>
+        <p id="cooking_time"></p>
+        <p id="servings"></p>
+        <p id="total_calories"></p>
+        <p id="calories_per_serving"></p>
+        <p id="num_protein"></p>
+        <p id="num_cabs"></p>
+        <p id="num_fat"></p>
+    </div>'''
 
     openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
     completion = openai.ChatCompletion.create(
