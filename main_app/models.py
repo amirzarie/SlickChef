@@ -10,4 +10,4 @@ class Recipe(models.Model):
         return f"Recipe: {self.recipe}"
 
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'recipe_id': self.id})
+        return reverse('about', kwargs={'recipe_id': self.id})

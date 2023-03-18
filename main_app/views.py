@@ -49,7 +49,7 @@ def get_ingredients(request):
 
 def show_recipe(request):
     user_prompt = request.POST
-    prompt = f"Give me a recipe using the following ingredients: {user_prompt}"
+    prompt = f"Give me a recipe using the following ingredients: {user_prompt}. Also, give your answer in a nicely formatted html (just everything that goes inside a div tag). But, just give me the html and nothing else and no other descriptions."
 
     openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
     completion = openai.ChatCompletion.create(
