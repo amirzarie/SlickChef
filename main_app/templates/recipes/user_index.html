@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>My Recipes</h1>
+
+{% if recipe.count %}
+  {% for recipe in recipes %}
+    <p>Placeholder :), added each time a user has a new recipe</p>
+  {% endfor %}
+{% else %}
+  <h4>No Recipes Yet :(</h4>
+{% endif %}
+
+
+{% endblock %}

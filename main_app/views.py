@@ -83,3 +83,7 @@ def show_recipe(request):
 
     chatgpt_recipe = completion["choices"][0]["message"]["content"]
     return render(request, 'recipes/show_recipe.html', {"recipe": chatgpt_recipe})
+
+def recipes_index(request):
+    recipes = Recipe.objects.filter(user=request.user)
+    return render(request, 'recipes/user_index.html', {'recipes': recipes})

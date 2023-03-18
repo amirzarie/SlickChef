@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Recipe(models.Model):
     recipe = models.TextField(max_length=2500)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Recipe: {self.recipe}"
