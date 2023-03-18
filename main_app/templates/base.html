@@ -20,7 +20,7 @@
           <li><a href="/" class="brand-logo">SlickChef</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           {% if user.is_authenticated %}
-          <li><a href="">My Recipes</a></li>
+          <li><a href="{% url 'user_index' %}">My Recipes</a></li>
           <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
