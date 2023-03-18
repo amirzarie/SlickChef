@@ -9,7 +9,8 @@
     <title>SlickChef</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
@@ -25,21 +26,19 @@
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'index' %}">All Recipes</a></li>
             {% if user.is_authenticated %}
-              <li><a href="">My Recipes</a></li> <!-- href to be added -->
-              <li><a href="{% url 'recipes_create' %}">Recipize!</a></li>
-              <li><a href="{% url 'logout' %}">Log Out</a></li>
+            <li><a href="">My Recipes</a></li>
+            <!-- href to be added -->
+            <li><a href="{% url 'recipes_create' %}">Recipize!</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
             {% else %}
-              <li><a href="{% url 'signup' %}">Sign Up</a></li>
-              <li><a href="{% url 'login' %}">Log In</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'login' %}">Log In</a></li>
             {% endif %}
           </ul>
         </div>
       </nav>
     </header>
-    <main class="container">
-      {% block content %} 
-      {% endblock %}
-    </main>
+    <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer teal">
       <div class="right">
         All Rights Reserved, &copy; 2023 Slick Chef &nbsp;
