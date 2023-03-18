@@ -9,30 +9,28 @@
     <title>SlickChef</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     <header class="navbar-fixed">
       <nav class="black">
-          <ul class="nav-area">
-              <li><a href="/" class="brand-logo">SlickChef</a></li>
-              <li><a href="{% url 'about' %}">About</a></li>
-              {% if user.is_authenticated %}
-                <li><a href="">My Recipes</a></li>
-                <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
-              {% else %}
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                <li><a href="{% url 'login' %}">Log In</a></li>
-              {% endif %}
-          </ul>
+        <ul class="nav-area">
+          <li><a href="/" class="brand-logo">SlickChef</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="">My Recipes</a></li>
+          <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'login' %}">Log In</a></li>
+          {% endif %}
+        </ul>
       </nav>
     </header>
-    <main class="container">
-      {% block content %}
-      {% endblock %}
-    </main>
+    <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer black">
       <div class="right">
         All Rights Reserved, &copy; 2023 Slick Chef &nbsp;
