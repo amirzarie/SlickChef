@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic import ListView
 import json
 
 # Auth
@@ -54,15 +53,15 @@ def show_recipe(request):
     prompt = f'''
     Give me a recipe using the following ingredients: {user_prompt}. But, return your answer by filling out the following python dictionary object:
     {{
-        "name": "",
+        "recipe_name": "",
         "ingredients": [],
         "instructions": [],
         "servings": ,
         "total_calories": ,
         "calories_per_serving": ,
-        "num_protein": ,
-        "num_carbs": ,
-        "num_fat": 
+        "total_protein": ,
+        "total_carbs": ,
+        "total_fat": 
     }}'''
 
     openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
@@ -74,8 +73,9 @@ def show_recipe(request):
     )
 
     chatgpt_recipe = completion["choices"][0]["message"]["content"]
-
+    print(chatgpt_recipe)
     chatgpt_recipe_dict = json.loads(chatgpt_recipe)
+    print(chatgpt_recipe_dict)
     return render(request, 'recipes/show_recipe.html', {"recipe": chatgpt_recipe_dict})
 
 def recipes_index(request):
