@@ -19,6 +19,15 @@ import openai
 
 
 # Create your views here.
+
+class RecipeCreate(CreateView):
+    model = Recipe
+    fields = ['recipe_name', 'ingredients', 'instructions', 'servings', 'total_calories', 'calories_per_serving', 'total_protein', 'total_carbs', 'total_fat']
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 def home(request):
     return render(request, 'home.html')
 
