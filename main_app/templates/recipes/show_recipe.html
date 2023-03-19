@@ -11,7 +11,7 @@
         <div class="loader"></div>
     </div>
 
-    <form method="post" enctype="multipart/form-data">
+    <form action="{% url 'recipes_create' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <br>
         <label for="recipe_name">Recipe name:</label>
@@ -20,13 +20,13 @@
 
         <label for="ingredients">Ingredients</label>
         {% for ingredient in recipe.ingredients %}
-        <input type="text" name="ingredients" value="{{ ingredient }}">
+        <input type="text" name="ingredients" value="{{ recipe.ingredients }}">
         {% endfor %}
         <br><br>
 
         <label for="instructions">Instructions</label>
         {% for instruction in recipe.instructions %}
-        <input type="text" name="instructions" value="{{ instruction }}">
+        <input type="text" name="instructions" value="{{ recipe.instructions }}">
         {% endfor %}
         <br><br>
 
@@ -55,8 +55,8 @@
         <br><br>
 
         <div>
-            <a href="" class="btn teal">Save</a>
-            <a href="" class="btn black">Exit</a>
+            <input type="submit" value="Add to My Recipes" class="btn teal">
+            <a href="{% url 'get_ingredients' %}" class="btn black">Back</a>
         </div>
 
         <br>

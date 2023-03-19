@@ -12,13 +12,16 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Need to add LoginRequiredMixin and login_required to all views we want to restrict. Leaving it out for now for ease of testing. - Ryan
 
 # Model
-from .models import Recipe
+from main_app.models import Recipe
 
 # API
 import openai
 
 
 # Create your views here.
+
+
+
 def home(request):
     return render(request, 'home.html')
 
@@ -76,8 +79,25 @@ def show_recipe(request):
     print(chatgpt_recipe)
     chatgpt_recipe_dict = json.loads(chatgpt_recipe)
     print(chatgpt_recipe_dict)
-    return render(request, 'recipes/show_recipe.html', {"recipe": chatgpt_recipe_dict})
+    return render(request, 'recipes/show_recipe.html', {"recipe": chatgpt_recipe_dict, "user_prompt": user_prompt})
+
+class RecipeCreate(CreateView):
+    model = Recipe
+    fields = ['recipe_name', 'ingredients', 'instructions', 'servings', 'total_calories', 'calories_per_serving', 'total_protein', 'total_carbs', 'total_fat']
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['user_prompt'] = self.request.POST.get('user_prompt')
+        return context
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 def recipes_index(request):
     recipes = Recipe.objects.filter(user=request.user)
     return render(request, 'recipes/user_index.html', {'recipes': recipes})
+
+def recipes_detail(request, recipe_id):
+    recipe = Recipe.objects.get(id=recipe_id)
+    return render(request, 'recipes/recipe_detail.html', {'recipe': recipe})
