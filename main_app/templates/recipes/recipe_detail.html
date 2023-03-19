@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Recipe Info</h1>
+
+<div class="row">
+  <div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ recipe.recipe_name }}</span>
+        <p>Ingredients: {{ recipe.ingredients }}</p>
+        <p>Instructions: {{ recipe.instructions }}</p>
+        <p>Servings: {{ recipe.servings }}</p>
+        <p>Total Calories: {{ recipe.total_calories}}</p>
+        <p>Calories Per Serving: {{ recipe.calories_per_serving }}</p>
+        <p>Total Protein: {{ recipe.total_protein }}g</p>
+        <p>Total Carbs: {{ recipe.total_carbs }}g</p>
+        <p>Total Fat: {{ recipe.total_fat }}g</p>
+    </div>
+    <div class="card-action">
+        <a href="">Edit</a>
+        <a href="">Delete</a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
