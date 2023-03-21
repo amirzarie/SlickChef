@@ -9,6 +9,8 @@ urlpatterns = [
     path('recipes/', views.recipes_index, name='user_index'),
     path('recipes/create_recipe/', views.RecipeCreate.as_view(), name='recipes_create'),
     path('recipes/<int:recipe_id>/', views.recipes_detail, name='recipe_detail'),
+    path('recipes/<int:pk>/update/', views.RecipeUpdate.as_view(), name='recipes_update'),
+    path('recipes/<int:pk>/delete/', views.RecipeDelete.as_view(), name='recipes_delete'),
 
     # Accounts
     path('accounts/signup/', views.signup, name='signup'),

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Recipe(models.Model):
-    recipe_name = models.CharField(max_length=100)
+    recipe_name = models.CharField(max_length=200)
     ingredients = models.CharField(max_length=2500)
     instructions = models.CharField(max_length=2500)
     servings = models.IntegerField()
