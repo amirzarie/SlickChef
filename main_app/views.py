@@ -104,7 +104,7 @@ def recipes_detail(request, recipe_id):
 
 class RecipeUpdate(UpdateView):
     model = Recipe
-    fields = '__all__'
+    fields = ['ingredients', 'instructions', 'servings', 'total_calories', 'calories_per_serving', 'total_protein', 'total_carbs', 'total_fat']
 
 class RecipeDelete(DeleteView):
     model = Recipe
