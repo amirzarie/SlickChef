@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic import ListView
+import json
 
 # Auth
 from django.contrib.auth import login
@@ -12,29 +12,16 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Need to add LoginRequiredMixin and login_required to all views we want to restrict. Leaving it out for now for ease of testing. - Ryan
 
 # Model
-from .models import Recipe
+from main_app.models import Recipe
 
 # API
 import openai
 
 
-def get_recipe(user_prompt):
-    prompt = f"Give me a recipe using the following ingredients: {user_prompt}"
-
-    openai.api_key = open("key.txt", "r").read().strip('\n')
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages = [{
-            "role": "user", "content": prompt
-        }]
-    )
-
-    ChatGPT_recipe = completion["choices"][0]["message"]["content"]
-
-    return ChatGPT_recipe
-
-
 # Create your views here.
+
+
+
 def home(request):
     return render(request, 'home.html')
 
@@ -59,21 +46,66 @@ def signup(request):
     return render(request, 'registration/signup.html', context)
 
 
-def recipes_index(request, recipe_id):
-    recipes = Recipe.objects.all()
-    return render(request, 'recipes/index.html', { 'recipes': recipes})
+def get_ingredients(request):
+    return render(request, 'main_app/get_ingredients.html')
 
 
-def recipes_detail(request,recipe_id):
-    recipe = Recipe.objects.get(id=recipe_id)
-    return render(request, 'recipes/detail.html', {'recipe': recipe})
+def show_recipe(request):
+    user_prompt = request.POST
 
+    prompt = f'''
+    Give me a recipe using the following ingredients: {user_prompt}. But, return your answer by filling out the following python dictionary object:
+    {{
+        "recipe_name": "",
+        "ingredients": [],
+        "instructions": [],
+        "servings": ,
+        "total_calories": ,
+        "calories_per_serving": ,
+        "total_protein": ,
+        "total_carbs": ,
+        "total_fat": 
+    }}'''
+
+    openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
+    completion = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{
+            "role": "user", "content": prompt
+        }]
+    )
+
+    chatgpt_recipe = completion["choices"][0]["message"]["content"]
+    print(chatgpt_recipe)
+    chatgpt_recipe_dict = json.loads(chatgpt_recipe)
+    print(chatgpt_recipe_dict)
+    return render(request, 'recipes/show_recipe.html', {"recipe": chatgpt_recipe_dict, "user_prompt": user_prompt})
 
 class RecipeCreate(CreateView):
     model = Recipe
-    fields = ["recipe"]
+    fields = ['recipe_name', 'ingredients', 'instructions', 'servings', 'total_calories', 'calories_per_serving', 'total_protein', 'total_carbs', 'total_fat']
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['user_prompt'] = self.request.POST.get('user_prompt')
+        return context
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
+def recipes_index(request):
+    recipes = Recipe.objects.filter(user=request.user)
+    return render(request, 'recipes/user_index.html', {'recipes': recipes})
+
+def recipes_detail(request, recipe_id):
+    recipe = Recipe.objects.get(id=recipe_id)
+    return render(request, 'recipes/recipe_detail.html', {'recipe': recipe})
+
+class RecipeUpdate(UpdateView):
+    model = Recipe
+    fields = ['ingredients', 'instructions', 'servings', 'total_calories', 'calories_per_serving', 'total_protein', 'total_carbs', 'total_fat']
 
 class RecipeDelete(DeleteView):
     model = Recipe
-    success_url = '/recipes/'
+    success_url = '/recipes/'    

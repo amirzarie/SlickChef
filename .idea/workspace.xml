@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="" />
+    <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/char-sui.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/cooking-pot.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/cooking.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/food-vlogger.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/lemonade.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/images/pizza.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/recipes/show_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/recipes/show_recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +31,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2MsWoC3skcDxwy8N9gIc0zGXvVv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -30,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VerbiageVoyage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,7 +129,11 @@
       <workItem from="1678556993383" duration="11294000" />
       <workItem from="1678575491243" duration="69000" />
       <workItem from="1678751925119" duration="3049000" />
-      <workItem from="1678920402043" duration="658000" />
+      <workItem from="1678920402043" duration="11431000" />
+      <workItem from="1679000786745" duration="3951000" />
+      <workItem from="1679031401668" duration="8984000" />
+      <workItem from="1679079286109" duration="953000" />
+      <workItem from="1679149335736" duration="9836000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,10 @@
-{% extends 'base.html' %} {% block content %}
-
+{% extends 'base.html' %} {% block content %} {% if not object %}
+<h1>Create Recipe</h1>
+{% else %}
+<h1>Edit <span class="teal-text">{{object.recipe_name}}</span></h1>
+{% endif %}
 <form action="" method="post">
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <input type="submit" value="Submit!" class="btn" />
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Add" class="btn teal" />
 </form>
-
 {% endblock %}

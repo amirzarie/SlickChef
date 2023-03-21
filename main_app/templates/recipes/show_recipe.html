@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %}
+
+    <style>
+        label {
+            font-size: 24px;
+        }
+    </style>
+
+<!-- show_recipe.html -->
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <form action="{% url 'recipes_create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+        <label for="recipe_name">Recipe name:</label>
+        <input type="text" name="recipe_name" id="recipe_name" value="{{ recipe.recipe_name }}"></input>
+        <br><br>
+
+        <label for="ingredients">Ingredients</label>
+        {% for ingredient in recipe.ingredients %}
+        <input type="text" name="ingredients" value="{{ recipe.ingredients }}">
+        {% endfor %}
+        <br><br>
+
+        <label for="instructions">Instructions</label>
+        {% for instruction in recipe.instructions %}
+        <input type="text" name="instructions" value="{{ recipe.instructions }}">
+        {% endfor %}
+        <br><br>
+
+        <label for="servings">Total servings:</label>
+        <input type="text" name="servings" id="servings" value="{{ recipe.servings }}"></input>
+        <br><br>
+
+        <label for="total_calories">Total calories:</label>
+        <input type="text" name="total_calories" id="total_calories" value="{{ recipe.total_calories }}"></input>
+        <br><br>
+
+        <label for="calories_per_serving">Calories per serving:</label>
+        <input type="text" name="calories_per_serving" id="calories_per_serving" value="{{ recipe.calories_per_serving }}"></input>
+        <br><br>
+
+        <label for="total_protein">Total protein:</label>
+        <input type="text" name="total_protein" id="total_protein" value="{{ recipe.total_protein }}"></input>
+        <br><br>
+
+        <label for="total_carbs">Total carbs:</label>
+        <input type="text" name="total_carbs" id="total_carbs" value="{{ recipe.total_carbs }}"></input>
+        <br><br>
+
+        <label for="total_fat">Total fat:</label>
+        <input type="text" name="total_fat" id="total_fat" value="{{ recipe.total_fat }}"></input>
+        <br><br>
+
+        <div>
+            <input type="submit" value="Add to My Recipes" class="btn teal">
+            <a href="{% url 'get_ingredients' %}" class="btn black">Back</a>
+        </div>
+
+        <br>
+
+    </form>
+
+{% endblock %}
