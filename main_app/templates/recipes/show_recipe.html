@@ -15,7 +15,8 @@
         {% csrf_token %}
         <br>
         <label for="recipe_name">Recipe name:</label>
-        <input type="text" name="recipe_name" id="recipe_name" value="{{ recipe.recipe_name }}"></input>
+        <input type="text" name="recipe_name" id="recipe_name" value="{{ recipe.recipe_name }}">
+        <p>{{ recipe.recipe_name }}</p>
         <br><br>
 
         <label for="ingredients">Ingredients</label>
