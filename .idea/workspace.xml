@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SlickChef/buttonover_effect.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SlickChef/hoverover_effect.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/recipes/recipe_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/recipes/recipe_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/recipes/show_recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/recipes/show_recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/recipes/user_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/recipes/user_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +139,8 @@
       <workItem from="1679211304429" duration="55000" />
       <workItem from="1679215716250" duration="289000" />
       <workItem from="1679356623955" duration="2499000" />
-      <workItem from="1679359747198" duration="298000" />
+      <workItem from="1679359747198" duration="1003000" />
+      <workItem from="1679438421750" duration="8963000" />
     </task>
     <servers />
   </component>

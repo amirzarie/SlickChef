@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <style>
+        #my_recipe_page {
+            color: teal;
+        }
+    </style>
+
 <h1>My Recipes</h1>
 
 {% if recipes %}
@@ -8,7 +14,7 @@
   <a href="{% url 'recipe_detail' recipe.id %}">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ recipe.recipe_name }}</span>
+        <span class="card-title" style="color: teal">{{ recipe.recipe_name }}</span>
       </div>
     </div>
   </a>
