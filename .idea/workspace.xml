@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/SlickChef/buttonover_effect.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SlickChef/hoverover_effect.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/get_ingredients.html" afterDir="false" />
@@ -140,7 +141,7 @@
       <workItem from="1679215716250" duration="289000" />
       <workItem from="1679356623955" duration="2499000" />
       <workItem from="1679359747198" duration="1003000" />
-      <workItem from="1679438421750" duration="8963000" />
+      <workItem from="1679438421750" duration="9303000" />
     </task>
     <servers />
   </component>
