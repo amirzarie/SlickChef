@@ -9,7 +9,8 @@
 ![create](/create.png)
 ![about](/about.png)
 ![recipe](/recipe.png)
-![detail](/detail.png)
+![detail1](/detail1.png)
+![detail2](/detail2.png)
 
 - <h3>Technologies Used:</h3>
   <ul>
