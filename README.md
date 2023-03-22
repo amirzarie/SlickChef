@@ -14,14 +14,21 @@
 
 - <h3>Technologies Used:</h3>
   <ul>
-   <li>Django</li>
-   <li>Html</li>
-   <li>css</li>
+   <li>DJANGO</li>
+   <li>HTML</li>
+   <li>CSS</li>
+   <li>PYTHON</li>
+   <li>POSTGRESQL</li>
+   <li>MATERIALIZE</li>
+   <li>HEROKU</li>
+   <li>CHATGPT</li>
   </ul>
   </br>
 
 - <h3>Getting Started:</h3>
   <h5>https://github.com/amirzarie/SlickChef</h5>
+  <h5>https://slickchef-57.herokuapp.com/</h5>
+  <h5>https://trello.com/b/ZWPLiTtj/project-3</h5>
 
   </br>
 
