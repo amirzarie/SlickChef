@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <style>
+        #log_in_page {
+            color: teal;
+        }
+    </style>
+
 <h1>Log In</h1>
 
 <form method="post" action="{% url 'login' %}">

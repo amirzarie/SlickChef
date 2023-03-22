@@ -2,16 +2,21 @@
 {% block content %}
     <style>
         label {
-            font-size: 24px;
+            font-size: 32px;
+        }
+
+        #recipize_page {
+            color: teal;
         }
     </style>
 
     <form action="{% url 'show_recipe' %}" method="post">
         {% csrf_token %}
+        <br>
         <label for="user-text">Ingredients</label>
         <textarea name="ingredients" id="ingredients" cols="20" rows="10"></textarea>
         <input type="submit" value="Recipize!" class="btn" />
     </form>
     <p>Example input: two eggs, tomatoes, bread, salt, pepper, olive oil, paprika, mayo, mustard, cheese, and pickles.</p>
-    <p style="color: grey">Note: this will take a few seconds...!</p>
+    <p style="color: grey">Note: this will take a few seconds...! Keep saying "yum" until we summon your recipe!</p>
 {% endblock %}

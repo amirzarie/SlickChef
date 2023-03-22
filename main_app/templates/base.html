@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SlickChef</title>
+    <link rel="icon" href="../static/images/SlickChef_ico_bgrm.png" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -18,14 +19,14 @@
       <nav class="black">
         <ul class="nav-area">
           <li><a href="/" class="brand-logo">SlickChef</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a id="about_page" href="{% url 'about' %}">About</a></li>
           {% if user.is_authenticated %}
-          <li><a href="{% url 'user_index' %}">My Recipes</a></li>
-          <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
+          <li><a id="my_recipe_page" href="{% url 'user_index' %}">My Recipes</a></li>
+          <li><a id="recipize_page" href="{% url 'get_ingredients' %}">Recipize!</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-          <li><a href="{% url 'login' %}">Log In</a></li>
+          <li><a id="sign_up_page" href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a id="log_in_page" href="{% url 'login' %}">Log In</a></li>
           {% endif %}
         </ul>
       </nav>

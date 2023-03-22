@@ -54,7 +54,7 @@ def show_recipe(request):
     user_prompt = request.POST
 
     prompt = f'''
-    Give me a recipe using the following ingredients: {user_prompt}. But, return your answer by filling out the following python dictionary object:
+    Give me a recipe using the following ingredients: {user_prompt}. But, return your answer by filling out the following python dictionary object (don't add additional information fields). Also, if the recipe isn't a well-known dish (e.g., lasagna), give it a quirky/funny name:
     {{
         "recipe_name": "",
         "ingredients": [],
@@ -100,6 +100,18 @@ def recipes_index(request):
 
 def recipes_detail(request, recipe_id):
     recipe = Recipe.objects.get(id=recipe_id)
+    recipe = {
+        "recipe_name": recipe.recipe_name,
+        "ingredients": recipe.ingredients.split(", "),
+        "instructions": recipe.instructions.split("., "),
+        "servings": recipe.servings,
+        "total_calories": recipe.total_calories,
+        "calories_per_serving": recipe.calories_per_serving,
+        "total_protein": recipe.total_protein,
+        "total_carbs": recipe.total_carbs,
+        "total_fat": recipe.total_fat,
+        "id": recipe.id
+    }
     return render(request, 'recipes/recipe_detail.html', {'recipe': recipe})
 
 class RecipeUpdate(UpdateView):
