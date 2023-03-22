@@ -18,13 +18,13 @@
       <nav class="black">
         <ul class="nav-area">
           <li><a href="/" class="brand-logo">SlickChef</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a id="about_page" href="{% url 'about' %}">About</a></li>
           {% if user.is_authenticated %}
-          <li><a href="{% url 'user_index' %}">My Recipes</a></li>
-          <li><a href="{% url 'get_ingredients' %}">Recipize!</a></li>
+          <li><a id="my_recipe_page" href="{% url 'user_index' %}">My Recipes</a></li>
+          <li><a id="recipize_page" href="{% url 'get_ingredients' %}">Recipize!</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a id="sign_up_page" href="{% url 'signup' %}">Sign Up</a></li>
           <li><a href="{% url 'login' %}">Log In</a></li>
           {% endif %}
         </ul>
