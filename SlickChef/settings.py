@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'SlickChef.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-from SlickChef.secrets import SECRET_KEY
+# from SlickChef.secrets import SECRET_KEY
 
 DATABASES = {
     'default': {
@@ -130,3 +130,7 @@ LOGOUT_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
