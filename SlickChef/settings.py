@@ -55,7 +55,7 @@ ROOT_URLCONF = 'SlickChef.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': []
+        'DIRS': [BASE_DIR / 'template']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -74,17 +74,16 @@ WSGI_APPLICATION = 'SlickChef.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-# from SlickChef.secrets import SECRET_KEY
+from SlickChef.secrets import password
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'slickchef1',
-        'User': ' ',
-        'PASSWORD': ' ',
+        'NAME': 'slickchef',
+        'USER': 'postgres',
+        'PASSWORD': password,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
