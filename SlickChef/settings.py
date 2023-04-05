@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'SlickChef.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-from SlickChef.secrets import password
+from SlickChef.my_secrets import password
 
 DATABASES = {
     'default': {
