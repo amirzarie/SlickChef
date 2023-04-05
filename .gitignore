@@ -36,7 +36,8 @@ __pycache__/
 .Python
 
 # Things we've added ourselves
-SlickChef/secrets.py
+SlickChef/my_secrets.py
+main_app/my_secrets.py
 venv/
 
 main_app/key.txt
