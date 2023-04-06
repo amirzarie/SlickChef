@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 import json
+import os
 
 # Auth
 from django.contrib.auth import login
@@ -67,7 +68,8 @@ def show_recipe(request):
         "total_fat": 
     }}'''
 
-    openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
+    # openai.api_key = open("main_app/key.txt", "r").read().strip('\n')
+    openai.api_key = os.getenv('ChatGPT-API-Key')
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{
