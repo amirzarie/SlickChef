@@ -74,16 +74,16 @@ WSGI_APPLICATION = 'SlickChef.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-# from main_app.my_secrets import password
-import os
+from main_app.my_secrets import password
+# import os
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'slickchef',
         'USER': 'postgres',
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        # 'PASSWORD': password,
+        # 'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'PASSWORD': password,
     }
 }
 

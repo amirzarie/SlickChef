@@ -41,7 +41,6 @@ main_app/my_secrets.py
 venv/
 
 main_app/key.txt
-main_app/migrations
 #
 
 env/
