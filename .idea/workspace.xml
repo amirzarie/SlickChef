@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f60863b-1951-4237-a73d-bd116ba59454" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SlickChef/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SlickChef/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +144,7 @@
       <workItem from="1680689034382" duration="2004000" />
       <workItem from="1680719341920" duration="115000" />
       <workItem from="1680749236953" duration="297000" />
-      <workItem from="1680820432252" duration="2466000" />
+      <workItem from="1680820432252" duration="3052000" />
     </task>
     <servers />
   </component>
