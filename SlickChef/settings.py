@@ -83,6 +83,7 @@ DATABASES = {
         'NAME': 'slickchef',
         'USER': 'postgres',
         'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        # 'PASSWORD': password,
     }
 }
 
