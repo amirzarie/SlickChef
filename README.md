@@ -1,7 +1,5 @@
 # SlickChef
-
-<h1>Slick Chef app:</h1> </hr>
-  <h4>This app is called slick chef. Slick chef is design to help you get the recipe for the ingredients you have and it also helps you in calculating the calories,fat,carbs of the recipe. The app allows you to edit and update your recipe if you wish to do so.</h4>
+<h4>SlickChef is designed to help you generate recipes using the ingredients you have available and our AI-backed web app. You can also modify and save these recipes in your account to create your own personalized cookbook. In addition, our web app provides nutritional information about your recipe our health-conscious clients!</h4>
 
 ### Screenshot:
 
@@ -14,24 +12,24 @@
 
 - <h3>Technologies Used:</h3>
   <ul>
-   <li>DJANGO</li>
-   <li>HTML</li>
-   <li>CSS</li>
-   <li>PYTHON</li>
-   <li>POSTGRESQL</li>
-   <li>MATERIALIZE</li>
-   <li>HEROKU</li>
-   <li>CHATGPT</li>
+   <li>Django</li>
+   <li>HTML/CSS/JavaScript</li>
+   <li>Python</li>
+   <li>PostgreSQL</li>
+   <li>Materialize</li>
+   <li>Heroku</li>
+   <li>ChatGPT-API</li>
   </ul>
+
   </br>
 
 - <h3>Getting Started:</h3>
+  <h5>https://slickchef.herokuapp.com/</h5>
   <h5>https://github.com/amirzarie/SlickChef</h5>
-  <h5>https://slickchef-57.herokuapp.com/</h5>
   <h5>https://trello.com/b/ZWPLiTtj/project-3</h5>
 
   </br>
 
 - <h3> Next Steps:</h3>
-  <h5>We plan on making ai generated pictures of the food  </h5>
+  <h5>We plan on making AI-generated pictures of the food  </h5>
   <h5>We plans make all recipes public if the user/client  want to share their recipe.</h5>
